@@ -1,6 +1,7 @@
 import React from "react";
 
 //import any components needed
+import { SpecialButtons } from './SpecialButton'
 
 //Import your array data to from the provided data file
 import { specials } from '../../../data'
@@ -11,9 +12,12 @@ const Specials = () => {
 
   return (
     <div>
-      {/* STEP 3 - Use .map() to iterate over your array data and return a button
+      {/* [x] STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
+      {specials.map(special => 
+        <SpecialButtons special={special} />
+      )}
     </div>
   );
 };
